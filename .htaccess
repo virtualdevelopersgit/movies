@@ -1,0 +1,11 @@
+
+# HTID:19156594: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+php_value display_errors 1
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:19156594:
+
+RewriteEngine On
+
+# Redirect https://virtualdevelop.000webhostapp.com/index.html to https://virtualdevelop.000webhostapp.com/index
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
